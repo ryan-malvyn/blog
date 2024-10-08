@@ -1,50 +1,79 @@
-<html class="bg-slate-900 flex flex-col justify-center items-center p-10">
+<html class="bg-slate-900 text-white p-20 flex flex-col justify-center items-center">
 
 <head>
-    <meta charset="utf-8" />
     <link href="../css/output.css" rel="stylesheet">
 </head>
 
-<body class="text-white items-center justify-center flex">
-    <section class="flex flex-col justify-center items-center p-4">
-        <article class="flex flex-col">
-            <!-- Breadcrumbs for blog -->
-            <ul class="flex justify-start gap-4 pl-0 py-2 pr-4 text-xs">
+<body class="flex flex-col gap-4 p-4">
+    <!-- Breadcrumbs -->
+    <div class="">
+        <ul class="flex gap-2 items-center">
+            <li>
                 <a href="../index.html">
                     🧑‍💻
                 </a>
-                <a href="Blog">
+            </li>
+            <li>
+                <a href="../blogs.html">
                     Blogs
                 </a>
+            </li>
+            <li>
                 <a href="./">
                     How I Got Fired
                 </a>
-            </ul>
-            <h1 class="text-xl font-semibold md:text-4xl">
-                The Story Of How I Got Fired
+            </li>
+        </ul>
+    </div>
+    <article>
+        <div class="py-4">
+            <h1 class="text-4xl md:text-6xl mb-2 font-bold">
+                How I Got Fired
             </h1>
-            <div class="p-4">
 
-                <!-- Name & Date -->
-                <div class="flex flex-col text-xs">
-                    <p class="underline opacity-35">
-                        Ryan Malvyn
-                    </p>
-                    <p>
-                        Saturday, 5th October 2024
-                    </p>
-                </div>
-
-                <!-- Socials -->
-                <div class="">
-
-                </div>
+            <!-- Name & Date -->
+            <div class="flex flex-col text-xs px-4">
+                <p class="underline opacity-35">
+                    Ryan Malvyn
+                </p>
+                <p>
+                    Saturday, 5th October 2024
+                </p>
             </div>
-                
-            <!-- Content section -->
-            <div id='content'></div>
-        </article>
-    </section>
+
+            <!-- Socials -->
+            <div class="flex">
+                <a href="" id="instagram" class="">
+                    <img src="../images/socials/instagram.svg" alt="link to instagram">
+                </a>
+                <a href="" id="twitter">
+                    <img src="../images/socials/twitter.svg" alt="link to twitter">
+                </a>
+                <a href="" id="youtube">
+                    <img src="../images/socials/youtube.svg" alt="link to youtube">
+                </a>
+                <a href="" id="github">
+                    <img src="../images/socials/github.svg" alt="link to github">
+                </a>
+            </div>
+        </div>
+        <div id="content" class="max-w-screen-sm text-justify">
+
+        </div>
+    </article>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Use the Fetch API to get the markdown content from the markdown file
+        fetch('./markdownContent/how-I-got-fired.md')
+            .then(response => response.text())
+            .then(markdownContent => {
+                // Convert markdown content to HTML using marked.js
+                document.getElementById('content').innerHTML = marked.parse(markdownContent);
+            })
+            .catch(error => {
+                console.error('Error fetching markdown:', error);
+            });
+    </script>
 </body>
 
 </html>

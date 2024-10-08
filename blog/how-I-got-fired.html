@@ -6,7 +6,7 @@
 
 <body class="flex flex-col gap-4 p-4">
     <!-- Breadcrumbs -->
-    <div class="bg-red-600">
+    <div class="">
         <ul class="flex gap-2 items-center">
             <li>
                 <a href="../index.html">
@@ -26,10 +26,40 @@
         </ul>
     </div>
     <article>
-        <p class="text-9xl font-bold">
-            How I Got Fired
-        </p>
-        <div id="content" class="border-4">
+        <div class="py-4 flex flex-col">
+            <h1 class="text-4xl md:text-6xl mb-2 font-bold">
+                How I Got Fired
+            </h1>
+
+            <!-- Name & Date -->
+            <div class="flex flex-col">
+                <div class="flex flex-col text-xs px-4">
+                    <p class="underline opacity-35">
+                        Ryan Malvyn
+                    </p>
+                    <p>
+                        Saturday, 5th October 2024
+                    </p>
+                </div>
+
+                <!-- Socials -->
+                <div class="flex gap-2">
+                    <a href="" id="instagram" class="text-xs">
+                        <img src="../images/socials/instagram.svg" alt="link to instagram">
+                    </a>
+                    <a href="" id="twitter">
+                        <img src="../images/socials/twitter.svg" alt="link to twitter">
+                    </a>
+                    <a href="" id="youtube">
+                        <img src="../images/socials/youtube.svg" alt="link to youtube">
+                    </a>
+                    <a href="" id="github">
+                        <img src="../images/socials/github.svg" alt="link to github">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="max-w-screen-sm text-justify">
 
         </div>
     </article>
@@ -46,7 +76,6 @@
                 console.error('Error fetching markdown:', error);
             });
     </script>
-
 </body>
 
 </html>
