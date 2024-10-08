@@ -60,7 +60,7 @@ As days gone by, I started to form connections, and learn a few things here and 
 
 I found out about Pieter Levels, and I eventually understood that there were people out there making their own money, coding for a living. The Indie Hacker community was real. It was a lingering dream behind my head that was always so far away, until now.
 
-<br>n
+<br>
 
 I made videos, as how I should, and gathered feedback, but our social media was not performing as expected. I tried to find the solutions, I developed a blogging system for our Saas, and it was ditched because we had other priorities. After 29 days of my new job... I got this email :
 
