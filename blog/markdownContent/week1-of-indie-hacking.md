@@ -34,7 +34,7 @@ Personal Growth
 
 <br>
 
-Yeah, I agree, we're not all nerds here. So here are a few things I learned over the week; 1. I have nothing going for me. I'm not like my friends out there who have a 9-5 stable income and a full time job at my age, I want to try something different. Sometimes, it feels like social norms and the discomfort of facing uncertainties alone because I choose to be different gets so heavy that I feel a quite unbearable amount of fear, doubt, and there's this sense of irresponsibility in trying this.
+Yeah, I agree, we're not all nerds here. So here are a few things I learned over the week; I have nothing going for me. I'm not like my friends out there who have a 9-5 stable income and a full time job at my age, I want to try something different. Sometimes, it feels like social norms and the discomfort of facing uncertainties alone because I choose to be different gets so heavy that I feel a quite unbearable amount of fear, doubt, and there's this sense of irresponsibility in trying this.
 
 <br>
 
@@ -48,4 +48,10 @@ But there's a silver lining to it. I don't have nothing on me also means I have 
 
 BUT THIS... THE COST OF WANTING TO BE DIFFERENT. I have to constantly remind myself that I didn't choose this path to be the same as everyone, I don't want to live out my life in an office and watch the people I love slowly get older and not having the ability to do anything about it.
 
+<br>
 
+So the goal moving forward, is to keep going no matter how uncertain things can get, no matter how much competitors are succeeding in X and boasting about it.
+
+<h3 class='font-bold italic text-2xl'>
+I know of no better life purpose than to perish in attempting the great and the impossible. - Friedrich Wilhelm Nietzsche
+</h3>
