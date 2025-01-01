@@ -1,0 +1,95 @@
+<html class="bg-slate-900 text-white p-10 md:p-20 flex flex-col justify-center items-center">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTQG0NM18K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CTQG0NM18K');
+</script>
+        <link href="../css/output.css" rel="stylesheet">
+</head>
+<body class="flex flex-col gap-4 p-4">
+    <!-- Breadcrumbs -->
+    <div class="">
+        <ul class="flex gap-2 items-center">
+            <li>
+                <a href="../index.html">
+                    🧑‍💻
+                </a>
+            </li>
+            <li>
+                <a href="../blogs.html">
+                    Blogs
+                </a>
+            </li>
+            <li>
+                <a href="./">
+                    Closing 2024
+                </a>
+            </li>
+        </ul>
+    </div>
+    <article>
+        <div class="py-4 flex flex-col">
+            <h1 class="text-4xl md:text-6xl mb-2 font-bold">
+                Closing 2024
+            </h1>
+
+            <!-- Name & Date -->
+            <div class="flex flex-col px-4 py-6 mb-10">
+                <div class="flex items-center">
+                    <div class="rounded-full flex items-center justify-center">
+                        <img src="../images/me.JPG" alt="My photo" class="rounded-3xl h-10">
+                    </div>
+                    <div class="flex flex-col text-xs px-4">
+                        <p class="underline opacity-35">
+                            Ryan Malvyn
+                        </p>
+                        <p>
+                            January 1st 2025
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Socials -->
+                <div class="flex gap-2">
+                    <a href="" id="instagram" class="text-xs">
+                        <img src="../images/socials/instagram.svg" alt="link to instagram">
+                    </a>
+                    <a href="" id="twitter">
+                        <img src="../images/socials/twitter.svg" alt="link to twitter">
+                    </a>
+                    <a href="" id="youtube">
+                        <img src="../images/socials/youtube.svg" alt="link to youtube">
+                    </a>
+                    <a href="" id="github">
+                        <img src="../images/socials/github.svg" alt="link to github">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="max-w-screen-sm text-justify">
+
+        </div>
+    </article>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Use the Fetch API to get the markdown content from the markdown file
+        // Change markdown file address here according to the blog post
+        fetch('./markdownContent/closing-2024.md')
+            .then(response => response.text())
+            .then(markdownContent => {
+                // Convert markdown content to HTML using marked.js
+                document.getElementById('content').innerHTML = marked.parse(markdownContent);
+            })
+            .catch(error => {
+                console.error('Error fetching markdown:', error);
+            });
+    </script>
+</body>
+
+</html>
