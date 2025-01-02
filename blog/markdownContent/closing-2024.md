@@ -1,12 +1,18 @@
 It's been a long year, and I did not end the year as how I hoped I would. And saying I fell short would be a major understatement. I missed my target by a lot. Metrics and numbers will be available down below at the bottom. First, we're closing out with stories and lessons learned.
 
+<br>
+
 <h1 class="text-3xl font-bold">
 2024 Highlights
 </h1>
 
+<br>
+
 <h3 class="text-xl font-semibold">
 There's Always a Silver Lining
 </h3>
+
+<br>
 
 One of the worst things of the year, was getting my license plates confiscated and getting fired all within a month. These 2 things humbled me so hard this year and the emotional roller coaster was like a truck, especially added on top of the fact that I'm a neurotic person.
 
@@ -56,15 +62,16 @@ The power I got from this was immense.
 
 <h1 class="text-3xl font-bold">
 2024 as Entrepreneur :
-🏋️‍♂️Exercised 250+ days
-🚀 Launched 2 websites
-📈 Invested $700 in Bitcoin
-📹 +26 Subscribers and +2.798 views on Youtube
-📖 Read 8 books
-👨‍🎓 Earned my master's degree
-❌ Fired from my first full time job
 </h1>
-
+<br>
+🏋️‍♂️Exercised 250+ days<br>  
+🚀Launched 2 websites<br>  
+📈Invested $700 in Bitcoin<br>  
+📹+26 Subscribers and +2.798 views on Youtube<br>  
+📖Read 8 books<br>  
+👨‍🎓 Earned my master's degree<br>  
+❌Fired from my first full time job<br>  
+<br>
 2024, You've been amazing. Aiming higher next year.
 
 
