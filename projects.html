@@ -3,6 +3,7 @@
 <head>
  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTQG0NM18K"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -10,16 +11,136 @@
 
   gtag('config', 'G-CTQG0NM18K');
 </script>
+<script>
+  function calculateDate(week,day){
+    const startDate = new Date();
+    startDate.setDate(startDate.getDate() - (week*7 + day));
+    return startDate.toISOString().split("T")[0];
+  }
+  function renderCommitTracker(commitCounts){
+    const tracker = document.getElementById("tracker");
+    tracker.className="flex gap-2 overflow-x-scroll"
+
+    for(let week = 0; week < 52;week++){
+      const weekDiv = document.createElement("div");
+      weekDiv.className="grid gap-1 grid-rows-7"
+      
+      for(let day=0;day<7;day++){
+        const date = calculateDate(week,day);
+        const commits = commitCounts[date] || 0;
+
+        const dayDiv = document.createElement("div")
+        dayDiv.className = `w-4 h-4 rounded-sm ${
+          commits === 0
+            ? "bg-gray-200"
+            : commits < 5
+            ? "bg-green-200"
+            : commits < 10
+            ? "bg-green-400"
+            : "bg-green-600"
+        }`;
+        weekDiv.appendChild(dayDiv)
+      }
+      tracker.appendChild(weekDiv)
+    }
+  }
+
+  function processCommitData(data){
+    let commitCounts = {};
+    data.forEach(event => {
+      if(event.type === "PushEvent"){
+        const date = event.created_at.split("T")[0];
+        commitCounts[date] = (commitCounts[date] || 0) + event.payload.commits.length;
+      }
+    })
+    renderCommitTracker(commitCounts)
+  }
+  function fetchCommitData(){
+    const url = "https://api.github.com/users/ryan-malvyn/events"
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        processCommitData(data)
+      })
+      .catch(error=>console.error("Error Fetching Data:",error))
+  }
+  fetchCommitData()
+</script>
 <link href="./css/output.css" rel="stylesheet">
 </head>
-<body>
-    <h1 class="text-white">
-      Github commit tracker
-    </h1>
-
-    <div class="flex flex-col gap-2">
-      Project name, progress bar, and short description.
+<body class="p-20">
+    <ul class="flex gap-2 items-center">
+            <li>
+                <a href="../index.html">
+                    🧑‍💻
+                </a>
+            </li>
+            <li>
+                <a href="../blogs.html">
+                    Projects
+                </a>
+            </li>
+        </ul>
+    <div class='flex flex-col mb-10'>
+      <h1 class='text-2xl font-bold text-white mb-4'>2025</h1>
+      <div id="tracker" class="grid grid-cols-52 gap-1 max-w-full overflow-x-auto border border-gray-600 p-2 rounded-xl"></div>
     </div>
+    <div class="flex flex-col gap-12 items-center justify-center">
+    <div class="flex items-center justify-center w-fit gap-2 p-2 border-white border-r-8 border-b-8 border-2 rounded-xl">
+      <div class="">
+        <img src="" />
+      </div>
+      <div class="flex flex-col gap-2 p-2">
+        <div class="flex items-center justify-between">
+          <h1 class="text-white text-2xl font-semibold px-2">
+            Reddit Clone Project
+          </h1>
+          <button class="bg-white py-2 px-4 text-white font-semibold rounded-xl bg-opacity-60">
+            View Site
+          </button>
+        </div>
+        <h3 class="text-white max-w-xl font-light p-2">
+          A reddit clone with oAuth. I built this project to solely practice my frontend skills before learning how to solve real world problems.
+        </h3>
+        <div class='flex p-2 items-center justify-between'>
+          <div class="w-full max-w-md h-4 bg-gray-200 rounded-full overflow-x-hidden">
+            <div class="w-4/5 h-full bg-blue-500"></div>
+          </div>
+          <h3 class="font-bold text-opacity-50 text-white">
+            80%
+          </h3>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex items-center justify-center w-fit gap-2 p-2 border-white border-r-8 border-b-8 border-2 rounded-xl">
+      <div class="">
+        <img src="" />
+      </div>
+      <div class="flex flex-col gap-2 p-2">
+      <div class="flex items-center justify-between">
+        <h1 class="text-white text-2xl font-semibold px-2">
+          KOLektiv
+        </h1>
+        <button class="bg-white py-2 px-4 text-white font-semibold rounded-xl bg-opacity-60">
+            View Site
+        </button>
+      </div>
+        <h3 class="text-white max-w-xl font-light p-2">
+          A project that allows small to medium FnB Businesses in Indonesia to pool their funds to hire influencers.
+        </h3>
+        <div class='flex p-2 items-center justify-between'>
+          <div class="w-full max-w-md h-4 bg-gray-200 rounded-full overflow-x-hidden">
+          <div class="w-0 h-full bg-blue-500"></div>
+        </div>
+          <h3 class="font-bold text-opacity-50 text-white">
+            0%
+          </h3>
+        </div>
+      </div>
+    </div>
+    </div>
+
 </body>
 
 </html>
